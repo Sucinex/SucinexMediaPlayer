@@ -47,10 +47,19 @@ public class Ventana extends Application {
 
         //!Creacion del boton para poner pantalla completa
         Boton botonPantallaCompleta = new Boton("Pantalla Completa");
+        botonPantallaCompleta.setId("botonPC");
         botonPantallaCompleta.setOnAction(e -> {
             stage.setFullScreen(!stage.isFullScreen());
         });
         root.getChildren().add(buscaPosicion(root.getChildren(), "botonSIP") + 1, botonPantallaCompleta);
+
+        //!Creacion del boton para poner la ventana siempre encima
+        Boton botonSiempreEncima = new Boton("Siempre Encima");
+        botonSiempreEncima.setId("botonSE");
+        botonSiempreEncima.setOnAction(e -> {
+            stage.setAlwaysOnTop(!stage.isAlwaysOnTop());
+        });
+        root.getChildren().add(buscaPosicion(root.getChildren(), "botonPC") + 1, botonSiempreEncima);
 
         //!Creacion del interior de la ventana
         Scene scene = new Scene(root, 400, 300);
