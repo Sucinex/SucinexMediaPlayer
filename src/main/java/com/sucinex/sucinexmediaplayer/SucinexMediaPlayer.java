@@ -1,6 +1,5 @@
 package com.sucinex.sucinexmediaplayer;
 
-import com.sucinex.sucinexmediaplayer.sucinexmusicplayer.SucinexMusicPlayer;
 import com.sucinex.sucinexmediaplayer.userinterface.Ventana;
 
 import java.util.InputMismatchException;
@@ -14,10 +13,11 @@ public class SucinexMediaPlayer {
     public static Scanner sc = new Scanner(System.in);
     
     public static void main(String args[]) {
-        Ventana ventana = new Ventana();
-        ventana.abreVentana(args);
+        Ventana ventana = new Ventana("SucinexMediaPlayer");
+        ventana.abreVentana();
 
-        int opcion = 0;
+        //No funciona debido a la interfaz grafica, mover a la interfaz grafica
+        /*int opcion = 0;
         boolean salir = false;
         
         do{
@@ -43,7 +43,7 @@ public class SucinexMediaPlayer {
                    System.out.println("Opcion no valida");
                 }
            } 
-        } while (!salir);
+        } while (!salir);*/
     }
     
     /**
